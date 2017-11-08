@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jP4-fd-ic0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yb7-n8-pxk">
+            <objects>
+                <viewController id="jP4-fd-ic0" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oH3-c5-dOO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Thc-Nf-t9Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q23-9a-zRx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-Eb-9oC">
+                                <rect key="frame" x="21" y="139" width="338" height="520"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jEK-GW-2WV">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-H7-blB" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738509999997" green="0.65290480849999999" blue="0.65291333200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Redo">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="Ylo-D0-tbB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcM-gA-NHd" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="86" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738509999997" green="0.65290480849999999" blue="0.65291333200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Undo">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="cCT-8f-1XM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL7-bJ-oV1" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="172" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738509999997" green="0.65290480849999999" blue="0.65291333200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-8N-feh" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="258" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738509999997" green="0.65290480849999999" blue="0.65291333200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="YfC-Nc-CXm">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="40"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="80" id="n69-N7-ajp">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-jM-e5R">
+                                        <rect key="frame" x="0.0" y="88" width="338" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJv-Ki-nhv" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738510131836" green="0.65290480852127075" blue="0.65291333198547363" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="kLp-iD-xc9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l45-f1-cCr" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="86" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738510131836" green="0.65290480852127075" blue="0.65291333198547363" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="±">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="aot-0K-9rh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNX-4J-l6k" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="172" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.65291738510131836" green="0.65290480852127075" blue="0.65291333198547363" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="V0w-aB-qHu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0id-V5-fEZ" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="258" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.945273756980896" green="0.60591620206832886" blue="0.21887148916721344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="P9Y-4O-Cyn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-0W-DXf">
+                                        <rect key="frame" x="0.0" y="176" width="338" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urd-iu-gwY" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="7H3-dp-TS2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGy-8q-0rF" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="86.5" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="jFx-Wl-zyL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbM-h5-dRf" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="raC-Oz-QGF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SV-9g-F2u" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="259.5" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.94509803921568625" green="0.60784313725490191" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="×">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="7y9-CU-Gva"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-0K-4om">
+                                        <rect key="frame" x="0.0" y="264" width="338" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpt-OO-JWt" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="blF-KB-lwb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaX-dL-oVH" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="86.5" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="9f0-SR-b3a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3W-cj-JwO" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="56h-XH-2N1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-0v-mG6" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="259.5" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.945273756980896" green="0.60591620206832886" blue="0.21887148916721344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="GL8-dK-D5B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-lB-OMe">
+                                        <rect key="frame" x="0.0" y="352" width="338" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4q3-B1-4mZ" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="clr-Qk-951"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-S2-i1y" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="86.5" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="gCF-bo-cc1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-wr-J4t" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="173" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="hSu-Sk-N86"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uws-OO-FR7" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="259.5" y="0.0" width="78.5" height="80"/>
+                                                <color key="backgroundColor" red="0.945273756980896" green="0.60591620206832886" blue="0.21887148916721344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="vRN-6r-pQj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-Ma-Kxo">
+                                        <rect key="frame" x="0.0" y="440" width="338" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPH-gi-dGe" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="34"/>
+                                                <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="klU-68-XeS"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-rX-ldg">
+                                                <rect key="frame" x="173" y="0.0" width="165" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5i-F3-Ub1" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="80"/>
+                                                        <color key="backgroundColor" red="0.19937513768672943" green="0.19937063753604889" blue="0.19937367737293243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <state key="normal" title=",">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="mu3-mY-f25"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajY-2A-B9Z" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="86.5" y="0.0" width="78.5" height="80"/>
+                                                        <color key="backgroundColor" red="0.945273756980896" green="0.60591620206832886" blue="0.21887148916721344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <color key="tintColor" red="0.94509803921568625" green="0.60784313725490191" blue="0.2196078431372549" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="29"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="nTr-75-YrW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xI8-CQ-Jdx">
+                                <rect key="frame" x="20" y="85" width="390" height="282"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Op9-Fl-4RG">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1I-UI-V60" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12936392426490784" green="0.12936069071292877" blue="0.13358174264431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="(">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-5h-nbn" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title=")">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHw-HV-5fq" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="mc">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-gP-cxF" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="m+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdX-P6-dYl" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="264" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="m-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-9c-eQN" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="330" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="5JC-lL-NLg">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="tBs-o3-cf0">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="60"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="mr">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eMe-UR-ju7">
+                                        <rect key="frame" x="0.0" y="58" width="390" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLC-ma-kFC" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="2nd">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="showAdditionalOperations:" destination="jP4-fd-ic0" eventType="touchUpInside" id="QvK-L2-FRO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-70-zKw" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="x²">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="DBa-Kr-IeJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-k1-Pni" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="x³">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="aj4-gT-PEp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tg-g9-W2s" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="x^y">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="I0T-hJ-Ks8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uj5-0A-9ci" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="264" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="e^x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="B59-go-F2e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wy-X3-Pn7" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="330" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="10^x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="1PO-Pz-vVT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sm0-1V-6n8">
+                                        <rect key="frame" x="0.0" y="116" width="390" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq0-U0-mcT" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="1/x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="fUr-8f-4nh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-mm-r1C" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="2√x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="r0W-15-FKI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffY-ab-ORU" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="∛x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="p7X-e5-I9A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uK-Yg-MFO" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="y√x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="kTR-e2-bvj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-tC-nat" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="264" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="ln">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="pxv-cS-XUz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyO-7D-ahY" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="330" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="log10">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="DuG-pd-zqH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-Nn-rJ3">
+                                        <rect key="frame" x="0.0" y="174" width="390" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4d-qL-Uky" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="x!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="7mw-vo-V6B"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-UG-FMA" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="sin">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="iz4-Fm-k2e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylB-lB-SUM" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="cos">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="CnT-cn-lSi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pys-52-SWu" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="tan">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="cV8-kf-vt8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-DR-3TS" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="264" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="e">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="IMr-ot-JyH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXU-gf-CP8" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="330" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="EE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="ktt-H1-hLH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="g73-sY-E1i">
+                                        <rect key="frame" x="0.0" y="232" width="390" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qM-JX-okb" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Rad">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="digitTapped:" destination="jP4-fd-ic0" eventType="touchUpInside" id="P9M-g1-gN0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRi-yc-But" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="sinh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="Fp5-NQ-OX9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObA-en-JP5" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="cosh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="X6m-Xs-UGo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAe-cQ-cjr" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="tanh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="MuO-0l-Ebw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9W-KP-K7s" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="264" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="π">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="performOperation:" destination="jP4-fd-ic0" eventType="touchUpInside" id="uCd-KQ-cR2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjD-aE-Pas" customClass="RoundedButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="330" y="0.0" width="60" height="50"/>
+                                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Rand">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="randomNumber:" destination="jP4-fd-ic0" eventType="touchUpInside" id="ypl-rO-hy1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dOL-MA-hkV">
+                                <rect key="frame" x="10" y="20" width="355" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="xua-wp-JSP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-G0-oY8">
+                                <rect key="frame" x="10" y="71" width="355" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="554" id="ZX9-zQ-jOw"/>
+                                    <constraint firstAttribute="height" constant="60" id="aKn-SA-dE6">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="80"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="627" id="bhK-Zj-AW5"/>
+                                    <constraint firstAttribute="height" constant="57" id="sPR-Dr-ZsT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZX9-zQ-jOw"/>
+                                        <exclude reference="bhK-Zj-AW5"/>
+                                        <exclude reference="sPR-Dr-ZsT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                    <mask key="constraints">
+                                        <exclude reference="ZX9-zQ-jOw"/>
+                                        <exclude reference="aKn-SA-dE6"/>
+                                        <include reference="bhK-Zj-AW5"/>
+                                        <include reference="sPR-Dr-ZsT"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rz2-uk-fJG">
+                                <rect key="frame" x="10" y="47" width="355" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="H2h-0M-ZlR">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="18"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dOL-MA-hkV" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="-304" id="9mS-sP-VsB"/>
+                            <constraint firstItem="VIY-Eb-9oC" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="65.5" id="9nw-b6-VUd"/>
+                            <constraint firstItem="t9m-G0-oY8" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="-232.5" id="C2B-GL-dtW"/>
+                            <constraint firstItem="rz2-uk-fJG" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" id="IQ9-vk-s7u">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="VIY-Eb-9oC" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="39" id="Mlc-6o-EdM"/>
+                            <constraint firstItem="dOL-MA-hkV" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" id="NgC-fK-dYQ"/>
+                            <constraint firstItem="VIY-Eb-9oC" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" constant="2.5" id="Nwq-wl-ube"/>
+                            <constraint firstItem="xI8-CQ-Jdx" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" constant="-118.5" id="RiE-8k-zge"/>
+                            <constraint firstItem="xI8-CQ-Jdx" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="38.5" id="bRL-BZ-c89"/>
+                            <constraint firstItem="rz2-uk-fJG" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="-274.5" id="cq7-VA-Xr0">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-178"/>
+                            </constraint>
+                            <constraint firstItem="rz2-uk-fJG" firstAttribute="leading" secondItem="Q23-9a-zRx" secondAttribute="leading" constant="10" id="jNM-kW-lxG"/>
+                            <constraint firstItem="t9m-G0-oY8" firstAttribute="leading" secondItem="Q23-9a-zRx" secondAttribute="leading" constant="10" id="k17-8y-dqY"/>
+                            <constraint firstItem="dOL-MA-hkV" firstAttribute="leading" secondItem="Q23-9a-zRx" secondAttribute="leading" constant="10" id="kUU-9A-wWF"/>
+                            <constraint firstItem="t9m-G0-oY8" firstAttribute="centerY" secondItem="Q23-9a-zRx" secondAttribute="centerY" constant="-139" id="oFJ-BN-fCo"/>
+                            <constraint firstItem="VIY-Eb-9oC" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" constant="235" id="smd-em-tAV">
+                                <variation key="heightClass=compact-widthClass=compact" constant="204"/>
+                            </constraint>
+                            <constraint firstItem="t9m-G0-oY8" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" id="xdz-tx-71y">
+                                <variation key="heightClass=compact-widthClass=compact" constant="2"/>
+                            </constraint>
+                            <constraint firstItem="t9m-G0-oY8" firstAttribute="centerX" secondItem="Q23-9a-zRx" secondAttribute="centerX" id="y7v-vq-osd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xI8-CQ-Jdx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="RiE-8k-zge"/>
+                                <exclude reference="bRL-BZ-c89"/>
+                                <exclude reference="oFJ-BN-fCo"/>
+                                <exclude reference="y7v-vq-osd"/>
+                                <exclude reference="Mlc-6o-EdM"/>
+                                <exclude reference="smd-em-tAV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Mlc-6o-EdM"/>
+                                <exclude reference="smd-em-tAV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="xI8-CQ-Jdx"/>
+                                <exclude reference="dOL-MA-hkV"/>
+                                <include reference="rz2-uk-fJG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="RiE-8k-zge"/>
+                                <include reference="bRL-BZ-c89"/>
+                                <exclude reference="C2B-GL-dtW"/>
+                                <include reference="oFJ-BN-fCo"/>
+                                <exclude reference="xdz-tx-71y"/>
+                                <include reference="y7v-vq-osd"/>
+                                <exclude reference="9nw-b6-VUd"/>
+                                <include reference="Mlc-6o-EdM"/>
+                                <exclude reference="Nwq-wl-ube"/>
+                                <include reference="smd-em-tAV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="DegreeToRadianButton" destination="0qM-JX-okb" id="0RO-wj-0Xh"/>
+                        <outlet property="cleanButton" destination="LJv-Ki-nhv" id="DZI-c6-bSx"/>
+                        <outlet property="cosMinus1" destination="ylB-lB-SUM" id="6N7-PQ-rdW"/>
+                        <outlet property="coshMinus1" destination="ObA-en-JP5" id="wz7-tr-mEg"/>
+                        <outlet property="degreeToRadianButton" destination="0qM-JX-okb" id="epa-aS-Wyo"/>
+                        <outlet property="displayLabel" destination="t9m-G0-oY8" id="atA-MA-AaZ"/>
+                        <outlet property="divideButton" destination="0id-V5-fEZ" id="edI-Zu-vai"/>
+                        <outlet property="exyxButton" destination="uj5-0A-9ci" id="Pcf-P8-piu"/>
+                        <outlet property="from10x2xButton" destination="9wy-X3-Pn7" id="WvU-Sy-Swd"/>
+                        <outlet property="fromLntoLogy" destination="xBq-tC-nat" id="dxW-VN-8yO"/>
+                        <outlet property="fromLog10toLog2" destination="EyO-7D-ahY" id="heH-Mh-czH"/>
+                        <outlet property="memoryLabel" destination="dOL-MA-hkV" id="z7x-Xl-Y9a"/>
+                        <outlet property="minusButton" destination="HPl-0v-mG6" id="sAC-oX-Ux4"/>
+                        <outlet property="multiplyButton" destination="4SV-9g-F2u" id="fBX-pk-Xgv"/>
+                        <outlet property="plusButton" destination="Uws-OO-FR7" id="ES2-7r-kW7"/>
+                        <outlet property="sequanceOfOperationsLabel" destination="rz2-uk-fJG" id="WjY-Vf-G8c"/>
+                        <outlet property="sinMinus1" destination="lVE-UG-FMA" id="Keg-h9-5Ko"/>
+                        <outlet property="sinhMinus1" destination="TRi-yc-But" id="bwO-K5-R81"/>
+                        <outlet property="tanMinus1" destination="pys-52-SWu" id="D6w-eb-onB"/>
+                        <outlet property="tanhMinus1" destination="rAe-cQ-cjr" id="FFl-W3-NXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOz-Or-hgh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.2" y="208.24587706146929"/>
+        </scene>
+    </scenes>
+</document>
