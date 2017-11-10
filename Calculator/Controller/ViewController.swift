@@ -299,17 +299,4 @@ class ViewController: UIViewController {
 
         cleanButton.setTitle("AC", for: .normal)
     }
-
-    private func highlightOperationButtonAndBack(button sender: RoundedButton) {
-        if !sender.isSelected {
-            sender.isSelected = true
-            sender.titleLabel?.textColor = UIColor(red: 241/255, green: 155/255, blue: 56/255, alpha: 1)
-            sender.titleLabel?.textColor = UIColor.green
-            sender.backgroundColor = UIColor.white
-        } else if sender.isSelected {
-            sender.isSelected = false
-            sender.titleLabel?.textColor = UIColor.white
-            sender.backgroundColor = UIColor(red: 241/255, green: 155/255, blue: 56/255, alpha: 1)
-        }
-    }
 }
