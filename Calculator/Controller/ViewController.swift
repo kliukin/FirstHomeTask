@@ -136,13 +136,13 @@ class ViewController: UIViewController {
         if !sender.isSelected {
             sender.isSelected = true
             sender.titleLabel?.textColor = UIColor.black
-            sender.backgroundColor = UIColor(red: 127/255, green: 127/255, blue: 128/255, alpha: 1)
+            sender.backgroundColor = #colorLiteral(red: 0.4980392157, green: 0.4980392157, blue: 0.5019607843, alpha: 1)
 
             changeFunctionButtons()
         } else if sender.isSelected {
             sender.isSelected = false
             sender.titleLabel?.textColor = UIColor.white
-            sender.backgroundColor = UIColor(red: 33/255, green: 33/255, blue: 34/255, alpha: 1)
+            sender.backgroundColor = #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1333333333, alpha: 1)
 
             changeFunctionButtonsBack()
         }
