@@ -20,7 +20,7 @@ class CalculatorProcessor {
 
     // MARK: - Public properties
 
-        public var resultIsPending: Bool {
+    public var resultIsPending: Bool {
         get {
             if pendingBinaryOperation != nil {
                 return true
@@ -98,7 +98,9 @@ class CalculatorProcessor {
 
     private  func performPendingBinaryOperation() {
         if pendingBinaryOperation != nil && accumulator != nil {
-            accumulator = pendingBinaryOperation!.perform(with: accumulator!)
+            if let accumulator = accumulator {
+                self.accumulator = pendingBinaryOperation?.perform(with: accumulator)
+            }
             pendingBinaryOperation = nil
         }
     }
@@ -123,14 +125,14 @@ class CalculatorProcessor {
 
             case .unaryOperation(let function):
                 if accumulator != nil {
-                    accumulator = function(accumulator!)
+                    accumulator = function(accumulator ?? 0)
                 }
             case .binaryOperation(let function):
                 if pendingBinaryOperation != nil {
                     performPendingBinaryOperation()
                 }
                 if accumulator != nil {
-                    pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
+                    pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator ?? 0)
                     accumulator = nil
                 }
             case .equals:
@@ -138,9 +140,9 @@ class CalculatorProcessor {
             case .clear:
                 operandsAndOperations.removeAll()
                 redoOperandAndOperations.removeAll()
-                }
             }
         }
+    }
 
     public func setOperand(_ operand: Double) {
         accumulator = operand
@@ -171,9 +173,11 @@ class CalculatorProcessor {
         for oper in operandsAndOperations {
             switch oper {
             case _ where (Double(oper) != nil):
-                    accumulator = Double(oper)!
+                if let digit = Double(oper) {
+                    accumulator = digit
 
                     description.addToDescription(digit: oper)
+                }
             default:
                 performOperation(oper)
                 description.addToDescription(symbol: oper)
@@ -200,9 +204,9 @@ class CalculatorProcessor {
     public func returnLastFrom(_ list: UndoRedo) -> String {
         switch list {
         case .undo:
-            return operandsAndOperations.last!
+            return operandsAndOperations.last ?? "0"
         case .redo:
-            return redoOperandAndOperations.last!
+            return redoOperandAndOperations.last ?? "0"
         }
     }
 
