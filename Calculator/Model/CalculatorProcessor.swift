@@ -81,9 +81,9 @@ class CalculatorProcessor {
         "x!": Operation.unaryOperation({ $0.factorial }),
         "EE": Operation.unaryOperation({ pow(10, $0) }),
 
-        "%": Operation.binaryOperation({ $0.truncatingRemainder(dividingBy: $1)}),
+        "%": Operation.binaryOperation({ $0.truncatingRemainder(dividingBy: $1) }),
         "×": Operation.binaryOperation({ $0 * $1 }),
-        "x^y": Operation.binaryOperation({pow($1, $0)}),
+        "x^y": Operation.binaryOperation({ pow($1, $0) }),
         "y√x": Operation.binaryOperation({ pow($0, 1.0 / $1) }),
         "logy": Operation.binaryOperation({ $0.logY($1) }),
         "÷": Operation.binaryOperation({ $0 / $1 }),

@@ -13,6 +13,7 @@ class DescriptionHandler {
     private struct Consts {
         static let space = " "
     }
+
     private var description = ""
     private var lastOperation = ""
     private var resultIsPending: Bool {
