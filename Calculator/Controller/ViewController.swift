@@ -235,7 +235,9 @@ class ViewController: UIViewController {
 
     private func decimalPointTapped() {
         userIsInTheMiddleOfTyping == false ? descriptionHandler.addToDescription(digit: "0") : ()
-        (displayLabel.text?.contains(","))! ? print("No dots allowed") : displayLabel.text?.append(",")
+        if let text = displayLabel.text {
+            text.contains(",") ? print("No dots allowed") : displayLabel.text?.append(",")
+        }
         userIsInTheMiddleOfTyping = true
     }
 
