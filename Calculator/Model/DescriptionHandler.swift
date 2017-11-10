@@ -14,6 +14,7 @@ class DescriptionHandler {
         static let space = " "
     }
 
+    private var unaryOperations: Set = ["1/x", "2√x", "∛x", "e^x", "10^x", "2^x"]
     private var description = ""
     private var lastOperation = ""
     private var resultIsPending: Bool {
@@ -73,10 +74,7 @@ class DescriptionHandler {
         switch operation {
         case .constant:
             description += symbol + Consts.space
-        case .unaryOperation where
-            symbol == "1/x" || symbol == "2√x"
-                || symbol == "∛x" || symbol == "e^x"
-                || symbol == "10^x" || symbol == "2^x":
+        case .unaryOperation where unaryOperations.contains(symbol):
 
             var mutableSymbol = String(symbol)
             mutableSymbol.removeLast(1)
