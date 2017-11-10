@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     private var userIsInTheMiddleOfTyping = false
     private var variables = [String: Double]()
     private var numberOfCharacterGraterThan16: Bool {
-        return (displayLabel.text?.characters.count)! >= 16
+        return (displayLabel.text?.count)! >= 16
     }
     private var displayValue: Double {
         get {
@@ -255,7 +255,7 @@ class ViewController: UIViewController {
 
     private func deleteTapped() {
         if userIsInTheMiddleOfTyping {
-            if let text = displayLabel.text?.characters {
+            if let text = displayLabel.text {
                 if text.count > 1 {
                     displayLabel.text?.removeLast()
                 } else {

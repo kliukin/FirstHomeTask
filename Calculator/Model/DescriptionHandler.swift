@@ -94,9 +94,9 @@ class DescriptionHandler {
     private func returnLastNumberFromDescription() -> String {
         var lastNumber = ""
         description.removeLast(1)
-        var descriptionCopy = description.replacingOccurrences(of: " ", with: "")
+        let descriptionCopy = description.replacingOccurrences(of: " ", with: "")
 
-        for char in descriptionCopy.characters.reversed() {
+        for char in descriptionCopy.reversed() {
             if Double(String(char)) != nil {
                 lastNumber.append(char)
                 description.removeLast(1)

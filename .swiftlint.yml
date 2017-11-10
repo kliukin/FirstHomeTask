@@ -60,4 +60,4 @@ excluded:
 - y
 - z
 
-warning_threshold: 1
+warning_threshold: 99
