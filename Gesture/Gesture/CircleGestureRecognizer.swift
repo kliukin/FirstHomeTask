@@ -1,7 +1,7 @@
 import UIKit
 import UIKit.UIGestureRecognizerSubclass
 
-class CircleGestureRecognizer: UIGestureRecognizer {
+final class CircleGestureRecognizer: UIGestureRecognizer {
 
     // MARK: - Private properties
 
