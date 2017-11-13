@@ -1,8 +1,6 @@
 import UIKit
 import UIKit.UIGestureRecognizerSubclass
 
-let piValue = CGFloat(Double.pi)
-
 class CircleGestureRecognizer: UIGestureRecognizer {
 
     // MARK: - Private properties
@@ -20,10 +18,10 @@ class CircleGestureRecognizer: UIGestureRecognizer {
             if let previousPoint = self.previousPoint {
                 var rotation = angleBetween(pointA: currentPoint, andPointB: previousPoint)
 
-                if rotation > piValue {
-                    rotation -= piValue * 2
-                } else if rotation < -piValue {
-                    rotation += piValue * 2
+                if rotation > CGFloat.pi {
+                    rotation -= CGFloat.pi * 2
+                } else if rotation < -CGFloat.pi {
+                    rotation += CGFloat.pi * 2
                 }
                 return rotation
             }
@@ -62,10 +60,10 @@ class CircleGestureRecognizer: UIGestureRecognizer {
     }
 
     public func angleForPoint(point: CGPoint) -> CGFloat {
-        var angle = CGFloat(-atan2f(Float(point.x - midPoint.x), Float(point.y - midPoint.y))) + piValue/2
+        var angle = CGFloat(-atan2f(Float(point.x - midPoint.x), Float(point.y - midPoint.y))) + CGFloat.pi/2
 
         if angle < 0 {
-            angle += piValue * 2
+            angle += CGFloat.pi * 2
         }
         return angle
     }

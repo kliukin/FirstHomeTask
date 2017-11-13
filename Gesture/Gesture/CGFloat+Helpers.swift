@@ -2,10 +2,10 @@ import UIKit
 
 extension CGFloat {
     var degrees: CGFloat {
-        return self * 180 / piValue
+        return self * 180 / CGFloat.pi
     }
     var radians: CGFloat {
-        return self * piValue / 180
+        return self * CGFloat.pi / 180
     }
     var rad2deg: CGFloat {
         return degrees
