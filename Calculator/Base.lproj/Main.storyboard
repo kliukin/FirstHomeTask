@@ -836,6 +836,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="xua-wp-JSP"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-G0-oY8">
                                 <rect key="frame" x="10" y="20" width="647" height="57"/>
@@ -935,6 +940,9 @@
                             <mask key="constraints">
                                 <include reference="RiE-8k-zge"/>
                                 <include reference="bRL-BZ-c89"/>
+                                <exclude reference="9mS-sP-VsB"/>
+                                <exclude reference="NgC-fK-dYQ"/>
+                                <exclude reference="kUU-9A-wWF"/>
                                 <exclude reference="C2B-GL-dtW"/>
                                 <include reference="oFJ-BN-fCo"/>
                                 <exclude reference="xdz-tx-71y"/>

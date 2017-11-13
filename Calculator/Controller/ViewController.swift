@@ -97,24 +97,14 @@ class ViewController: UIViewController {
         } else {
             if userIsInTheMiddleOfTyping {
                 processor.setOperand(formatToDergeeOrRad(number: displayValue, operation))
-                processor.appendTo(.undo, symbol: operation)
-                descriptionHandler.addToDescription(symbol: operation)
 
                 userIsInTheMiddleOfTyping = false
-
-                updateSequanceOfOperationLabel()
-            } else if !userIsInTheMiddleOfTyping {
-                processor.appendTo(.undo, symbol: operation)
-                descriptionHandler.addToDescription(symbol: operation)
-
-                userIsInTheMiddleOfTyping = false
-
             } else if processor.resultIsPending {
                 processor.performOperation(operation)
-                processor.appendTo(.undo, symbol: operation)
-
-                descriptionHandler.addToDescription(symbol: operation)
             }
+
+            processor.appendTo(.undo, symbol: operation)
+            descriptionHandler.addToDescription(symbol: operation)
             processor.performOperation(operation)
             updateSequanceOfOperationLabel()
         }
