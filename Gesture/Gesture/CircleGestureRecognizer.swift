@@ -14,19 +14,18 @@ final class CircleGestureRecognizer: UIGestureRecognizer {
     // MARK: - Public properties
 
     public var rotation: CGFloat? {
-        if let currentPoint = self.currentPoint {
-            if let previousPoint = self.previousPoint {
-                var rotation = angleBetween(pointA: currentPoint, andPointB: previousPoint)
-
-                if rotation > CGFloat.pi {
-                    rotation -= CGFloat.pi * 2
-                } else if rotation < -CGFloat.pi {
-                    rotation += CGFloat.pi * 2
-                }
-                return rotation
-            }
+        guard let currentPoint = currentPoint, let previousPoint = previousPoint else {
+            return nil
         }
-        return nil
+
+        var rotation = angleBetween(pointA: currentPoint, andPointB: previousPoint)
+
+        if rotation > CGFloat.pi {
+            rotation -= CGFloat.pi * 2
+        } else if rotation < -CGFloat.pi {
+            rotation += CGFloat.pi * 2
+        }
+        return rotation
     }
 
     public var distance: CGFloat? {
