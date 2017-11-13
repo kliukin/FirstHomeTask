@@ -50,7 +50,7 @@ class ViewController: UIViewController {
 
         if currentValue == 100.0 {
             if !isSegueInProcess {
-                self.performSegue(withIdentifier: "Show Tab Bar", sender: self)
+                performSegue(withIdentifier: "Show Tab Bar", sender: self)
                 isSegueInProcess = true
             }
         }
