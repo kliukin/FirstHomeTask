@@ -78,8 +78,7 @@ class ViewController: UIViewController {
         case "M": addVariable(named: character)
         case "→M": addValueToVariable()
         case ",": decimalPointTapped()
-        case "C": cleanDisplay()
-        case "AC": cleanDisplay()
+        case "C", "AC": cleanDisplay()
         case "Rad", "Deg": radToDeg(currentState: character)
         default: performDigitTapping(digit: character)
         }
@@ -132,7 +131,7 @@ class ViewController: UIViewController {
         displayLabel.text = String(result)
     }
 
-    @IBAction func showAdditionalOperations(_ sender: RoundedButton) {
+    @IBAction func showAdditionalOperations(_ sender: UIButton) {
         if !sender.isSelected {
             sender.isSelected = true
             sender.titleLabel?.textColor = UIColor.black
