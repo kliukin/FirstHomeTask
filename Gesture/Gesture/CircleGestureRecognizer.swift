@@ -51,13 +51,13 @@ final class CircleGestureRecognizer: UIGestureRecognizer {
 
     // MARK: - Public methods
 
-    public func distanceBetween(pointA: CGPoint, andPointB pointB: CGPoint) -> CGFloat {
+    func distanceBetween(pointA: CGPoint, andPointB pointB: CGPoint) -> CGFloat {
         let dx = Float(pointA.x - pointB.x)
         let dy = Float(pointA.y - pointB.y)
         return CGFloat(sqrtf(dx*dx + dy*dy))
     }
 
-    public func angleForPoint(point: CGPoint) -> CGFloat {
+    func angleForPoint(point: CGPoint) -> CGFloat {
         var angle = CGFloat(-atan2f(Float(point.x - midPoint.x), Float(point.y - midPoint.y))) + CGFloat.pi/2
 
         if angle < 0 {
@@ -66,7 +66,7 @@ final class CircleGestureRecognizer: UIGestureRecognizer {
         return angle
     }
 
-    public func angleBetween(pointA: CGPoint, andPointB pointB: CGPoint) -> CGFloat {
+    func angleBetween(pointA: CGPoint, andPointB pointB: CGPoint) -> CGFloat {
         return angleForPoint(point: pointA) - angleForPoint(point: pointB)
     }
 
@@ -75,41 +75,41 @@ final class CircleGestureRecognizer: UIGestureRecognizer {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
 
-        if let firstTouch = touches.first {
-
-            currentPoint = firstTouch.location(in: self.view)
-
-            var newState: UIGestureRecognizerState = .began
-
-            if let innerRadius = self.innerRadius, let distance = self.distance {
-                if distance < innerRadius {
-                    newState = .failed
-                }
-            }
-
-            if let outerRadius = self.outerRadius, let distance = self.distance {
-                if distance > outerRadius {
-                    newState = .failed
-                }
-            }
-            state = newState
+        guard let firstTouch = touches.first else {
+            return
         }
+
+        currentPoint = firstTouch.location(in: self.view)
+
+        if let innerRadius = self.innerRadius, let distance = self.distance {
+            if distance < innerRadius {
+                return
+            }
+        }
+
+        if let outerRadius = self.outerRadius, let distance = self.distance {
+            if distance > outerRadius {
+                return
+            }
+        }
+        state = .began
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesMoved(touches, with: event)
 
-        if state == .failed {
+        guard state != .failed else {
             return
         }
 
-        if let firstTouch = touches.first {
-
-            currentPoint = firstTouch.location(in: self.view)
-            previousPoint = firstTouch.previousLocation(in: self.view)
-
-            state = .changed
+        guard let firstTouch = touches.first else {
+            return
         }
+
+        currentPoint = firstTouch.location(in: self.view)
+        previousPoint = firstTouch.previousLocation(in: self.view)
+
+        state = .changed
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
