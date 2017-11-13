@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     private var displayValue: Double {
         get {
-            guard let displayText = displayLabel.text else { fatalError("Text is missing") }
+            let displayText = displayLabel.text ?? "0"
 
             let displayTextWithoutCommas = displayText.replacingOccurrences(of: ",", with: ".")
             let displayTextWithoutCommasAndSpaces = displayTextWithoutCommas.replacingOccurrences(of: " ", with: "")
