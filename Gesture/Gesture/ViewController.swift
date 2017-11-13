@@ -4,7 +4,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak private var circleImageView: UIImageView!
 
-    private var isSegueInProcess = false
     private var innerRadius: CGFloat {
         return circleImageView.frame.width / 3
     }
@@ -42,17 +41,15 @@ class ViewController: UIViewController {
         if recognizer.rotation == nil {
             currentValue = 0
         }
-
+        
         if let rotation = recognizer.rotation {
             currentValue += rotation.degrees / 360 * 100
             print("value: \(currentValue)")
         }
 
         if currentValue == 100.0 {
-            if !isSegueInProcess {
-                performSegue(withIdentifier: "Show Tab Bar", sender: self)
-                isSegueInProcess = true
-            }
+            performSegue(withIdentifier: "Show Tab Bar", sender: self)
+            currentValue = 0
         }
     }
 }
