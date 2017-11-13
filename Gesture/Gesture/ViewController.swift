@@ -2,17 +2,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak private var circleImage: UIImageView!
+    @IBOutlet weak private var circleImageView: UIImageView!
 
     private var isSegueInProcess = false
     private var innerRadius: CGFloat {
-        return circleImage.frame.width / 3
+        return circleImageView.frame.width / 3
     }
     private var outerRadius: CGFloat {
-        return circleImage.frame.width / 2
+        return circleImageView.frame.width / 2
     }
     private var center: CGPoint {
-        return circleImage.center
+        return circleImageView.center
     }
     private var currentValue: CGFloat = 0.0 {
         didSet {

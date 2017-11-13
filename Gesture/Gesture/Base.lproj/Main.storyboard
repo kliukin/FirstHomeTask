@@ -154,7 +154,7 @@
                         <viewLayoutGuide key="safeArea" id="JMs-3Y-let"/>
                     </view>
                     <connections>
-                        <outlet property="circleImage" destination="LxW-9t-uAM" id="vGX-8N-wC6"/>
+                        <outlet property="circleImageView" destination="LxW-9t-uAM" id="bqP-RL-IIN"/>
                         <segue destination="5eu-B7-ABI" kind="show" identifier="Show Tab Bar" id="ipm-op-6IU">
                             <nil key="action"/>
                         </segue>
