@@ -255,15 +255,10 @@ class ViewController: UIViewController {
     }
 
     private func deleteTapped() {
-        if userIsInTheMiddleOfTyping {
-            if let text = displayLabel.text {
-                if text.count > 1 {
-                    displayLabel.text?.removeLast()
-                } else {
-                    displayLabel.text = " "
-                }
-            }
+        guard let text = displayLabel.text, userIsInTheMiddleOfTyping else {
+            return
         }
+        text.count > 1 ? displayLabel.text?.removeLast(1) : displayLabel.text?.removeAll()
     }
 
     private func performDigitTapping(digit: String) {
