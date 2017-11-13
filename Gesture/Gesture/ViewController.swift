@@ -20,12 +20,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let circleRecognizer = CircleGestureRecognizer(midPoint: circleImage.center,
+                                                       innerRadius: circleImage.frame.height / 3,
+                                                       outerRadius: circleImage.frame.height / 2,
                                                        target: self, action: #selector(circleGesture))
 
         view.addGestureRecognizer(circleRecognizer)
     }
 
     @objc func circleGesture(recognizer: CircleGestureRecognizer) {
+        if recognizer.rotation == nil {
+            currentValue = 0
+        }
 
         if let rotation = recognizer.rotation {
             currentValue += rotation.degrees / 360 * 100
