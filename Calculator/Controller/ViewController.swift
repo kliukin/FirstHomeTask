@@ -268,9 +268,8 @@ class ViewController: UIViewController {
                 return
             }
 
-            let textCurrentlyInDisplay = displayText
             if !numberOfCharacterGraterThan16 {
-                displayLabel.text = textCurrentlyInDisplay + digit
+                displayLabel.text = displayText + digit
             }
         } else {
             displayLabel.text = digit
