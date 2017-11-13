@@ -8,9 +8,9 @@ extension CGFloat {
         return self * piValue / 180
     }
     var rad2deg: CGFloat {
-        return self.degrees
+        return degrees
     }
     var deg2rad: CGFloat {
-        return self.radians
+        return radians
     }
 }
