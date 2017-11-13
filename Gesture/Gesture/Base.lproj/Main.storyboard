@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U9b-hF-G6r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="piW-jw-Tza"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v33-8n-VPd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKV-Tf-PiU">
-                                <rect key="frame" x="158" y="323" width="59" height="21"/>
+                                <rect key="frame" x="130.5" y="273.5" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,11 +52,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Aez-JI-ttO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vph-Uz-05h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFd-ba-PX6">
-                                <rect key="frame" x="167.5" y="323" width="40" height="21"/>
+                                <rect key="frame" x="140" y="273.5" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,11 +84,11 @@
                         <viewControllerLayoutGuide type="bottom" id="eGb-zU-Ky0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fpv-zt-qP9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dI-Af-WWa">
-                                <rect key="frame" x="170.5" y="323" width="34" height="21"/>
+                                <rect key="frame" x="143" y="273.5" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,11 +135,11 @@
                         <viewControllerLayoutGuide type="bottom" id="dAY-8j-eJI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tQY-vp-zEj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-9t-uAM">
-                                <rect key="frame" x="20" y="166" width="335" height="335"/>
+                                <rect key="frame" x="20" y="144" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LxW-9t-uAM" secondAttribute="height" multiplier="1:1" id="jet-cg-tHI"/>
                                 </constraints>
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rd-As-oYA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2724.609375" y="25.036603221083453"/>
+            <point key="canvasLocation" x="-2725.5999999999999" y="24.7376311844078"/>
         </scene>
     </scenes>
     <resources>

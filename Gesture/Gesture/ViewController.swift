@@ -5,6 +5,15 @@ class ViewController: UIViewController {
     @IBOutlet weak private var circleImage: UIImageView!
 
     private var isSegueInProcess = false
+    private var innerRadius: CGFloat {
+        return circleImage.frame.width / 3
+    }
+    private var outerRadius: CGFloat {
+        return circleImage.frame.width / 2
+    }
+    private var center: CGPoint {
+        return circleImage.center
+    }
     private var currentValue: CGFloat = 0.0 {
         didSet {
             if currentValue > 100 {
@@ -15,14 +24,16 @@ class ViewController: UIViewController {
             }
         }
     }
+    private var circleRecognizer: CircleGestureRecognizer {
+        return CircleGestureRecognizer(midPoint: center,
+                                       innerRadius: innerRadius,
+                                       outerRadius: outerRadius,
+                                       target: self,
+                                       action: #selector(circleGesture))
+    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let circleRecognizer = CircleGestureRecognizer(midPoint: circleImage.center,
-                                                       innerRadius: circleImage.frame.height / 3,
-                                                       outerRadius: circleImage.frame.height / 2,
-                                                       target: self, action: #selector(circleGesture))
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
 
         view.addGestureRecognizer(circleRecognizer)
     }
