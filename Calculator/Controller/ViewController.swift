@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 
     // MARK: - Actions
 
-    @IBAction func digitTapped(_ sender: UIButton) {
+    @IBAction func nonOperationButtonTapped(_ sender: UIButton) {
         guard let character = sender.currentTitle else {
             assertionFailure("Failed to get the title")
             return
@@ -76,12 +76,12 @@ class ViewController: UIViewController {
 
         switch character {
         case "M": addVariable(named: character)
-        case "→M" : addValueToVariable()
-        case "," : decimalPointTapped()
-        case "C" : cleanDisplay()
+        case "→M": addValueToVariable()
+        case ",": decimalPointTapped()
+        case "C": cleanDisplay()
         case "AC": cleanDisplay()
         case "Rad", "Deg": radToDeg(currentState: character)
-        default: numberDigitTapped(digit: character)
+        default: performDigitTapping(digit: character)
         }
     }
 
@@ -267,7 +267,7 @@ class ViewController: UIViewController {
         }
     }
 
-    private func numberDigitTapped(digit: String) {
+    private func performDigitTapping(digit: String) {
         if userIsInTheMiddleOfTyping {
             guard let displayText = displayLabel.text else {
                 assertionFailure("Text is missing")
