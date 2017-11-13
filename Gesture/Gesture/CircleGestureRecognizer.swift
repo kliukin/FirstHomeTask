@@ -29,11 +29,10 @@ final class CircleGestureRecognizer: UIGestureRecognizer {
     }
 
     public var distance: CGFloat? {
-        if let nowPoint = self.currentPoint {
-            return self.distanceBetween(pointA: self.midPoint, andPointB: nowPoint)
+        guard let nowPoint = currentPoint else {
+            return nil
         }
-
-        return nil
+        return self.distanceBetween(pointA: self.midPoint, andPointB: nowPoint)
     }
 
     // MARK: - Initialization
